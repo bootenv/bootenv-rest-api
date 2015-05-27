@@ -22,7 +22,7 @@
     "loopback-boot": "^2.7.1",
     "loopback-datasource-juggler": "^2.28.1",
     "strong-express-metrics": "^2.0.0",
-    "serve-favicon": "^2.2.1"
+    "winston": "^1.0.0"
   },
   "optionalDependencies": {
     "loopback-explorer": "^1.7.2"
