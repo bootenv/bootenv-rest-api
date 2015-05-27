@@ -7,23 +7,24 @@
       "./models"
     ]
   },
-  "User": {
-    "dataSource": "db"
+  "user": {
+    "dataSource": "MongoDS",
+    "public": true
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "MongoDS",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "MongoDS",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "MongoDS",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "MongoDS",
     "public": false
   }
 }

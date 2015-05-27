@@ -1,6 +1,11 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
+  "MongoDS": {
+    "name": "MongoDS",
+    "connector": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "bootenv-db",
+    "username": "I-need-bootenv-here",
+    "password": "Serious-I-need-bootenv-here-NOW!"
   }
 }

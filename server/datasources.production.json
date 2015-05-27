@@ -1,0 +1,7 @@
+{
+  "MongoDS": {
+    "name": "MongoDS",
+    "connector": "mongodb",
+    "url": "mongodb://<dbuser>:<dbpassword>@ds037622.mongolab.com:37622/bootenv-db"
+  }
+}
