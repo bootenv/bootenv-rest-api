@@ -8,7 +8,10 @@
     },
     "rest": {
       "normalizeHttpPath": false,
-      "xml": false
+      "disableStackTrace": true,
+      "supportedTypes": [
+        "application/json"
+      ]
     },
     "json": {
       "strict": false,

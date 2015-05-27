@@ -1,4 +1,5 @@
-module.exports = function enableAuthentication(server) {
-  // enable authentication
-  server.enableAuth();
+'use strict';
+
+module.exports = function (app) {
+  app.enableAuth();
 };
