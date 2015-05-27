@@ -21,6 +21,7 @@
     "loopback": "^2.18.0",
     "loopback-boot": "^2.7.1",
     "loopback-datasource-juggler": "^2.28.1",
+    "serve-favicon": "^2.2.1",
     "strong-express-metrics": "^2.0.0",
     "winston": "^1.0.0"
   },
