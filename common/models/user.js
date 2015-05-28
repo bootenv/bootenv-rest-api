@@ -1,7 +1,7 @@
 'use strict';
 
 var log   = require('../../server/utils/logger'),
-    getIp = require('ipware')().get_ip;
+    ipware = require('../../server/utils/ipware');
 
 module.exports = function (user) {
 
@@ -13,7 +13,7 @@ module.exports = function (user) {
 
     if (request) {
       try {
-        ip = getIp(request).clientIp;
+        ip = ipware(request).clientIp;
       } catch (ex) {
         log.error('Error getting client IP!', ex);
       }
