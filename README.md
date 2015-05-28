@@ -12,7 +12,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone git@github.com:bootenv/bootenv-rest-api.git` this repository
-* change into the new directory `bootenv-rest-api.git`
+* change into the new directory `bootenv-rest-api`
 * `nvm use`
 * `npm install`
 
