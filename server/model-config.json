@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./node_modules/loopback-component-passport/lib/models"
+    ]
+  },
+  "ACL": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "user": {
+    "dataSource": "MongoDS",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": false
+    }
+  },
+  "accessToken": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "userCredential": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "userIdentity": {
+    "dataSource": "MongoDS",
+    "public": false
+  }
+}
