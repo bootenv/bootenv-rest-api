@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "bootenv-rest-api",
   "engines": {
-    "node": ">=0.12.2"
+    "node": ">=iojs-2.1"
   },
   "repository": {
     "type": "git",
