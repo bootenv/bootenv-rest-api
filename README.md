@@ -14,6 +14,7 @@ You will need the following things properly installed on your computer.
 * `git clone git@github.com:bootenv/bootenv-rest-api.git` this repository
 * change into the new directory `bootenv-rest-api`
 * `nvm use`
+* `npm install -g strongloop`
 * `npm install`
 
 ## DB Config
