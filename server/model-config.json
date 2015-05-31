@@ -38,5 +38,17 @@
   "userIdentity": {
     "dataSource": "MongoDS",
     "public": false
+  },
+  "account": {
+    "dataSource": "MongoDS",
+    "public": true
+  },
+  "project": {
+    "dataSource": "MongoDS",
+    "public": true
+  },
+  "environment": {
+    "dataSource": "MongoDS",
+    "public": true
   }
 }

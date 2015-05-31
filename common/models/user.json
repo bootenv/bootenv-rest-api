@@ -23,7 +23,7 @@
       "type": "string",
       "required": false
     },
-    "thumbnail": {
+    "fullName": {
       "type": "string",
       "required": false
     }

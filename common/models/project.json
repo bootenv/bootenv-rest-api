@@ -1,0 +1,29 @@
+{
+  "name": "project",
+  "plural": "projects",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "environments": {
+      "type": "hasMany",
+      "model": "environment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
