@@ -44,6 +44,11 @@
       "type": "hasMany",
       "model": "userCredential",
       "foreignKey": "userId"
+    },
+    "personalAccount": {
+      "type": "belongsTo",
+      "model": "account",
+      "foreignKey": ""
     }
   },
   "acls": [],
