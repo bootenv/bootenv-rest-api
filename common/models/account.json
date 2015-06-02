@@ -6,12 +6,21 @@
   "mongodb": {
     "collection": "accounts"
   },
-  "hidden": [
-    "created",
-    "createdIp",
-    "lastUpdated",
-    "lastUpdatedIp"
-  ],
+  "mixins": {
+    "TimeStamp": {
+      "createdAt" : "created",
+      "updatedAt" : "lastUpdated",
+      "required" : false
+    },
+    "Ips": {
+      "createdByIp" : "createdIp",
+      "updatedByIp" : "lastUpdatedIp",
+      "required" : false
+    },
+    "Readonly": {
+      "projects": true
+    }
+  },
   "properties": {
     "name": {
       "type": "string",
@@ -21,11 +30,10 @@
     "description": {
       "type": "string"
     },
-    "createdIp": {
-      "type": "string"
-    },
-    "lastUpdatedIp": {
-      "type": "string"
+    "public": {
+      "type": "boolean",
+      "index": true,
+      "default": true
     }
   },
   "validations": [],
@@ -36,7 +44,8 @@
     },
     "owners": {
       "type": "referencesMany",
-      "model": "user"
+      "model": "user",
+      "foreignKey": "ownerIds"
     }
   },
   "acls": [],

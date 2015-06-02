@@ -6,11 +6,19 @@
   "mongodb": {
     "collection": "users"
   },
+  "mixins": {
+    "TimeStamp": {
+      "createdAt" : "created",
+      "updatedAt" : "lastUpdated",
+      "required" : false
+    },
+    "Ips": {
+      "createdByIp" : "createdIp",
+      "updatedByIp" : "lastUpdatedIp",
+      "required" : false
+    }
+  },
   "hidden": [
-    "created",
-    "createdIp",
-    "lastUpdated",
-    "lastUpdatedIp",
     "emailVerified",
     "verificationToken",
     "accessTokens",
@@ -25,12 +33,6 @@
       "type": "string"
     },
     "language": {
-      "type": "string"
-    },
-    "createdIp": {
-      "type": "string"
-    },
-    "lastUpdatedIp": {
       "type": "string"
     }
   },

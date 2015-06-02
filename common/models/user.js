@@ -1,7 +1,5 @@
 'use strict';
 
-var createdUpdated = require('../../server/utils/created-updated');
-
 function disableRemoteRelationship(user, relationship) {
   user.disableRemoteMethod('__count__' + relationship, false);
   user.disableRemoteMethod('__get__' + relationship, false);
@@ -14,9 +12,6 @@ function disableRemoteRelationship(user, relationship) {
 }
 
 module.exports = function (user) {
-
-  // Update updated_by and family
-  createdUpdated(user);
 
   user.disableRemoteMethod('count', true);
   user.disableRemoteMethod('find', true);

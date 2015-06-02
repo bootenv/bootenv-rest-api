@@ -6,12 +6,18 @@
   "mongodb": {
     "collection": "environments"
   },
-  "hidden": [
-    "created",
-    "createdIp",
-    "lastUpdated",
-    "lastUpdatedIp"
-  ],
+  "mixins": {
+    "TimeStamp": {
+      "createdAt" : "created",
+      "updatedAt" : "lastUpdated",
+      "required" : false
+    },
+    "Ips": {
+      "createdByIp" : "createdIp",
+      "updatedByIp" : "lastUpdatedIp",
+      "required" : false
+    }
+  },
   "properties": {
     "name": {
       "type": "string",
@@ -20,6 +26,11 @@
     },
     "description": {
       "type": "string"
+    },
+    "public": {
+      "type": "boolean",
+      "index": true,
+      "default": true
     }
   },
   "validations": [],
