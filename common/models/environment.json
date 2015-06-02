@@ -3,6 +3,9 @@
   "http.path": "environment",
   "plural": "environments",
   "base": "PersistedModel",
+  "mongodb": {
+    "collection": "environments"
+  },
   "hidden": [
     "created",
     "createdIp",

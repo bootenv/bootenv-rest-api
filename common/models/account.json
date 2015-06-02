@@ -3,6 +3,9 @@
   "http.path": "account",
   "plural": "accounts",
   "base": "PersistedModel",
+  "mongodb": {
+    "collection": "accounts"
+  },
   "hidden": [
     "created",
     "createdIp",

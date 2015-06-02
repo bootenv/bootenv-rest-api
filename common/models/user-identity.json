@@ -1,6 +1,9 @@
 {
   "name": "userIdentity",
   "base": "UserIdentity",
+  "mongodb": {
+    "collection": "userIdentities"
+  },
   "properties": {},
   "validations": [],
   "relations": {

@@ -3,6 +3,9 @@
   "http.path": "user",
   "plural": "users",
   "base": "User",
+  "mongodb": {
+    "collection": "users"
+  },
   "hidden": [
     "created",
     "createdIp",
