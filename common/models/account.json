@@ -20,13 +20,11 @@
   "relations": {
     "projects": {
       "type": "hasMany",
-      "model": "project",
-      "foreignKey": ""
+      "model": "project"
     },
     "owners": {
-      "type": "hasMany",
-      "model": "user",
-      "foreignKey": ""
+      "type": "referencesMany",
+      "model": "user"
     }
   },
   "acls": [],
