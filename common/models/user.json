@@ -1,5 +1,6 @@
 {
   "name": "user",
+  "http.path": "user",
   "plural": "users",
   "base": "User",
   "hidden": [
@@ -8,24 +9,26 @@
     "lastUpdated",
     "lastUpdatedIp",
     "emailVerified",
-    "verificationToken"
+    "verificationToken",
+    "accessTokens",
+    "credentials",
+    "challenges",
+    "identities",
+    "realm",
+    "status"
   ],
   "properties": {
-    "createdIp": {
-      "type": "string",
-      "required": false
-    },
-    "lastUpdatedIp": {
-      "type": "string",
-      "required": false
+    "fullName": {
+      "type": "string"
     },
     "language": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
-    "fullName": {
-      "type": "string",
-      "required": false
+    "createdIp": {
+      "type": "string"
+    },
+    "lastUpdatedIp": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -47,8 +50,7 @@
     },
     "personalAccount": {
       "type": "belongsTo",
-      "model": "account",
-      "foreignKey": ""
+      "model": "Account"
     }
   },
   "acls": [],

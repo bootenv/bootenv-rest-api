@@ -1,11 +1,14 @@
 {
-  "name": "account",
+  "name": "Account",
+  "http.path": "account",
   "plural": "accounts",
   "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
+  "hidden": [
+    "created",
+    "createdIp",
+    "lastUpdated",
+    "lastUpdatedIp"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -14,13 +17,19 @@
     },
     "description": {
       "type": "string"
+    },
+    "createdIp": {
+      "type": "string"
+    },
+    "lastUpdatedIp": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
     "projects": {
       "type": "hasMany",
-      "model": "project"
+      "model": "Project"
     },
     "owners": {
       "type": "referencesMany",

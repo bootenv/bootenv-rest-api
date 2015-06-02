@@ -1,11 +1,14 @@
 {
-  "name": "project",
+  "name": "Project",
+  "http.path": "project",
   "plural": "projects",
   "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
+  "hidden": [
+    "created",
+    "createdIp",
+    "lastUpdated",
+    "lastUpdatedIp"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -20,7 +23,7 @@
   "relations": {
     "environments": {
       "type": "hasMany",
-      "model": "environment",
+      "model": "Environment",
       "foreignKey": ""
     }
   },

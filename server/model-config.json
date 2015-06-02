@@ -39,15 +39,15 @@
     "dataSource": "MongoDS",
     "public": false
   },
-  "account": {
+  "Account": {
     "dataSource": "MongoDS",
     "public": true
   },
-  "project": {
+  "Project": {
     "dataSource": "MongoDS",
     "public": true
   },
-  "environment": {
+  "Environment": {
     "dataSource": "MongoDS",
     "public": true
   }

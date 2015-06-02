@@ -1,11 +1,14 @@
 {
-  "name": "environment",
+  "name": "Environment",
+  "http.path": "environment",
   "plural": "environments",
   "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
+  "hidden": [
+    "created",
+    "createdIp",
+    "lastUpdated",
+    "lastUpdatedIp"
+  ],
   "properties": {
     "name": {
       "type": "string",

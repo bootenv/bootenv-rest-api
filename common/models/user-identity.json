@@ -1,6 +1,5 @@
 {
   "name": "userIdentity",
-  "plural": "userIdentities",
   "base": "UserIdentity",
   "properties": {},
   "validations": [],

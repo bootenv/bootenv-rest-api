@@ -2,13 +2,13 @@
 
 var createdUpdated = require('../../server/utils/created-updated');
 
-module.exports = function(account) {
+module.exports = function(Account) {
 
   // Update updatedBy and family
-  createdUpdated(account);
+  createdUpdated(Account);
 
   // When creating, add the current user to the owners
-  account.observe('before save', function(context, next) {
+  Account.observe('before save', function(context, next) {
     if (ctx.isNewInstance) {
       app.models.user.findById(context.req.accessToken.userId, function(err, user) {
         if (err) {
