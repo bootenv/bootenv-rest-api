@@ -12,7 +12,7 @@
       "updatedAt" : "lastUpdated",
       "required" : false
     },
-    "Ips": {
+    "IPs": {
       "createdByIp" : "createdIp",
       "updatedByIp" : "lastUpdatedIp",
       "required" : false

@@ -26,6 +26,7 @@
     "loopback-component-passport": "^1.3.1",
     "loopback-connector-mongodb": "^1.10.0",
     "loopback-datasource-juggler": "^2.29.2",
+    "loopback-ds-ips-mixin": "^1.0.1",
     "loopback-ds-readonly-mixin": "^1.0.0",
     "loopback-ds-timestamp-mixin": "^2.1.1",
     "passport": "^0.2.2",
