@@ -1,17 +1,16 @@
 'use strict';
 
-var     loopback = require('loopback'),
-            boot = require('loopback-boot'),
-loopbackPassport = require('loopback-component-passport'),
-             log = require('./utils/logger'),
-       providers = require('./auth-providers.json');
-
+var loopback = require('loopback');
+var boot = require('loopback-boot');
+var loopbackPassport = require('loopback-component-passport');
+var log = require('./utils/logger');
+var providers = require('./auth-providers.json');
 
 var app = module.exports = loopback();
 
+require('loopback-ds-ips-mixin')(app);
 require('loopback-ds-timestamp-mixin')(app);
 require('loopback-ds-readonly-mixin')(app);
-require('../common/mixins/ips-mixin')(app);
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
