@@ -1,20 +1,27 @@
 {
   "name": "bootenv-rest-api",
+  "description": "Bootenv REST-API",
   "version": "1.0.0",
-  "description": "bootenv-rest-api",
-  "engines": {
-    "iojs": "2.1.x",
-    "npm": "2.11.x"
-  },
+  "author": "Bootenv",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:bootenv/bootenv-rest-api.git"
   },
+  "engines": {
+    "iojs": "2.1.x",
+    "npm": "2.11.x"
+  },
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint .",
+    "pretest": "jscs . && jshint .",
     "start": "node server/server.js"
   },
+  "keywords": [
+    "Bootenv",
+    "Loopback",
+    "Strongloop"
+  ],
   "dependencies": {
     "async": "^1.2.0",
     "compression": "^1.4.4",
@@ -24,7 +31,7 @@
     "loopback": "^2.18.0",
     "loopback-boot": "^2.8.0",
     "loopback-component-passport": "^1.3.1",
-    "loopback-connector-mongodb": "^1.10.0",
+    "loopback-connector-mongodb": "^1.11.0",
     "loopback-datasource-juggler": "^2.29.2",
     "loopback-ds-ips-mixin": "^1.0.1",
     "loopback-ds-readonly-mixin": "^1.0.0",
@@ -44,6 +51,7 @@
     "loopback-explorer": "^1.7.2"
   },
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "jscs": "^1.13.1"
   }
 }
