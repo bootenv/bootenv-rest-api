@@ -1,4 +1,9 @@
-# Bootenv-REST API [![Build Status](https://travis-ci.org/bootenv/bootenv-rest-api.svg)](https://travis-ci.org/bootenv/bootenv-rest-api)
+# Bootenv-REST API
+
+[![license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)]()
+[![engine](https://img.shields.io/badge/iojs-v2.1.0-yellow.svg)]()
+[![npm](https://img.shields.io/npm/v/npm.svg)]()
+[![Build Status](https://travis-ci.org/bootenv/bootenv-rest-api.svg?branch=master)](https://travis-ci.org/bootenv/bootenv-rest-api)
 
 ## Prerequisites
 
@@ -52,3 +57,12 @@ Specify what it takes to deploy your app.
 * [StrongLoop](https://strongloop.com/)
 * [LoopBack](http://docs.strongloop.com/display/public/LB/LoopBack)
 * [Getting started with LoopBack](http://docs.strongloop.com/display/public/LB/Getting+started+with+LoopBack)
+
+VERSIONS
+=============
+ 
+ - 1.0.0 (current)
+
+LICENSE
+=============
+[Apache-2.0](LICENSE)

@@ -1,7 +1,7 @@
 'use strict';
 
-var environment = require('./environment'),
-    winston     = require('winston');
+var environment = require('./environment');
+var winston = require('winston');
 
 var config = {
   colors: {

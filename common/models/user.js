@@ -11,7 +11,7 @@ function disableRemoteRelationship(user, relationship) {
   user.disableRemoteMethod('__updateById__' + relationship, false);
 }
 
-module.exports = function (user) {
+module.exports = function(user) {
 
   user.disableRemoteMethod('count', true);
   user.disableRemoteMethod('find', true);
