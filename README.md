@@ -1,4 +1,4 @@
-# Bootenv-REST API
+# [![>bootenv](http://bootenv.com/img/logo-light-transparent-readme-files.png)](http://bootenv.com)-REST API
 
 [![license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)]()
 [![engine](https://img.shields.io/badge/iojs-v2.1.0-yellow.svg)]()
