@@ -29,8 +29,10 @@
     },
     "public": {
       "type": "boolean",
-      "index": true,
-      "default": false
+      "index": true
+    },
+    "personal": {
+      "type": "boolean"
     },
     "description": {
       "type": "string"
