@@ -27,13 +27,19 @@
       "required": true,
       "index": true
     },
-    "description": {
-      "type": "string"
-    },
     "public": {
       "type": "boolean",
       "index": true,
-      "default": true
+      "default": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   },
   "validations": [],
