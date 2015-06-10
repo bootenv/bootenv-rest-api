@@ -12,6 +12,8 @@ require('loopback-ds-ips-mixin')(app);
 require('loopback-ds-timestamp-mixin')(app);
 require('loopback-ds-readonly-mixin')(app);
 
+app.use(loopback.compress());
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname);

@@ -2,10 +2,6 @@
   "MongoDS": {
     "name": "MongoDS",
     "connector": "mongodb",
-    "host": "localhost",
-    "port": 27017,
-    "database": "bootenv-db",
-    "username": "I-need-bootenv-here",
-    "password": "Serious-I-need-bootenv-here-NOW!"
+    "url": "mongodb://I-need-bootenv-here:Serious-I-need-bootenv-here-NOW!@localhost:27017/bootenv-db"
   }
 }
