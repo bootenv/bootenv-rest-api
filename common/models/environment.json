@@ -34,7 +34,17 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "variableValues": {
+      "type": "embedsMany",
+      "model": "VariableValue",
+      "property": "variables",
+      "options": {
+        "persistent": true,
+        "autoId": true
+      }
+    }
+  },
   "acls": [],
   "methods": []
 }

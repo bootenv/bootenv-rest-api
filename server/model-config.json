@@ -57,5 +57,13 @@
   "Environment": {
     "dataSource": "MongoDS",
     "public": true
+  },
+  "VariableDefinition": {
+    "dataSource": "MongoDS",
+    "public": false
+  },
+  "VariableValue": {
+    "dataSource": "MongoDS",
+    "public": false
   }
 }

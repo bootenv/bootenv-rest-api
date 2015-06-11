@@ -41,6 +41,15 @@
     "environments": {
       "type": "hasMany",
       "model": "Environment"
+    },
+    "variableDefinitions": {
+      "type": "embedsMany",
+      "model": "VariableDefinition",
+      "property": "variables",
+      "options": {
+        "persistent": true,
+        "autoId": true
+      }
     }
   },
   "acls": [],

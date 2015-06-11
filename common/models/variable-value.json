@@ -1,0 +1,17 @@
+{
+  "name": "VariableValue",
+  "http.path": "variable",
+  "plural": "variables",
+  "base": "VariableDefinition",
+  "mongodb": {},
+  "mixins": {},
+  "properties": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
