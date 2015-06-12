@@ -27,6 +27,9 @@
     "description": {
       "type": "string"
     },
+    "color": {
+      "type": "string"
+    },
     "public": {
       "type": "boolean",
       "index": true,
