@@ -58,6 +58,10 @@
     "dataSource": "MongoDS",
     "public": true
   },
+  "EnvironmentToken": {
+    "dataSource": "MongoDS",
+    "public": true
+  },
   "VariableDefinition": {
     "dataSource": "MongoDS",
     "public": false

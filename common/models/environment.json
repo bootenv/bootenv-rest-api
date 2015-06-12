@@ -35,6 +35,10 @@
   },
   "validations": [],
   "relations": {
+    "tokens": {
+      "type": "hasMany",
+      "model": "EnvironmentToken"
+    },
     "variableValues": {
       "type": "embedsMany",
       "model": "VariableValue",

@@ -1,0 +1,36 @@
+{
+  "name": "EnvironmentToken",
+  "http.path": "token",
+  "plural": "tokens",
+  "base": "PersistedModel",
+  "mongodb": {
+    "collection": "tokens"
+  },
+  "mixins": {
+    "TimeStamp": {
+      "createdAt" : "created",
+      "updatedAt" : "lastUpdated",
+      "required" : false
+    },
+    "IPs": {
+      "createdByIp" : "createdIp",
+      "updatedByIp" : "lastUpdatedIp",
+      "required" : false
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "environment": {
+      "type": "belongsTo",
+      "model": "Environment"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
