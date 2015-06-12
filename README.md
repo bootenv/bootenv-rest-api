@@ -42,11 +42,9 @@ db.createUser({user: "I-need-bootenv-here", pwd: "Serious-I-need-bootenv-here-NO
 * Visit your API status at [http://localhost:3000](http://localhost:3000).
 * To explore your API visit [http://localhost:3000/explorer](http://localhost:3000/explorer).
 
-
 ### Code Generators
 
 Make use of the many generators for code, try `slc --help` for more details
-
 
 ### Deploying
 
@@ -58,11 +56,10 @@ Specify what it takes to deploy your app.
 * [LoopBack](http://docs.strongloop.com/display/public/LB/LoopBack)
 * [Getting started with LoopBack](http://docs.strongloop.com/display/public/LB/Getting+started+with+LoopBack)
 
-VERSIONS
-=============
+## Versions
  
  - 1.0.0 (current)
 
-LICENSE
-=============
+## License
+
 [Apache-2.0](LICENSE)
