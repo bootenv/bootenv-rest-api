@@ -1,21 +1,21 @@
 {
   "name": "Environment",
-  "http.path": "environment",
   "plural": "environments",
   "base": "PersistedModel",
+  "http.path": "environment",
   "mongodb": {
     "collection": "environments"
   },
   "mixins": {
     "TimeStamp": {
-      "createdAt" : "created",
-      "updatedAt" : "lastUpdated",
-      "required" : false
+      "createdAt": "created",
+      "updatedAt": "lastUpdated",
+      "required": false
     },
     "IPs": {
-      "createdByIp" : "createdIp",
-      "updatedByIp" : "lastUpdatedIp",
-      "required" : false
+      "createdByIp": "createdIp",
+      "updatedByIp": "lastUpdatedIp",
+      "required": false
     }
   },
   "properties": {

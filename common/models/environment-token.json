@@ -1,21 +1,21 @@
 {
   "name": "EnvironmentToken",
-  "http.path": "token",
   "plural": "tokens",
   "base": "PersistedModel",
+  "http.path": "token",
   "mongodb": {
     "collection": "tokens"
   },
   "mixins": {
     "TimeStamp": {
-      "createdAt" : "created",
-      "updatedAt" : "lastUpdated",
-      "required" : false
+      "createdAt": "created",
+      "updatedAt": "lastUpdated",
+      "required": false
     },
     "IPs": {
-      "createdByIp" : "createdIp",
-      "updatedByIp" : "lastUpdatedIp",
-      "required" : false
+      "createdByIp": "createdIp",
+      "updatedByIp": "lastUpdatedIp",
+      "required": false
     }
   },
   "properties": {

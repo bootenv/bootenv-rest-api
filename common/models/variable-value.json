@@ -1,8 +1,8 @@
 {
   "name": "VariableValue",
-  "http.path": "variable",
   "plural": "variables",
   "base": "VariableDefinition",
+  "http.path": "variable",
   "mongodb": {},
   "mixins": {},
   "properties": {

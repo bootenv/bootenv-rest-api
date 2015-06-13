@@ -23,7 +23,6 @@ app.use(loopback.token({
   model: app.models.accessToken,
   currentUserLiteral: 'me'
 }));
-app.models.user.settings.acls = []; // TODO: remove this
 
 // Passport configurators
 var PassportConfigurator = loopbackPassport.PassportConfigurator;

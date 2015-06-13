@@ -1,7 +1,7 @@
 {
   "MongoDS": {
+    "url": "mongodb://I-need-bootenv-here:Serious-I-need-bootenv-here-NOW!@localhost:27017/bootenv-db",
     "name": "MongoDS",
-    "connector": "mongodb",
-    "url": "mongodb://I-need-bootenv-here:Serious-I-need-bootenv-here-NOW!@localhost:27017/bootenv-db"
+    "connector": "mongodb"
   }
 }

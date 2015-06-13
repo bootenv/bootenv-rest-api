@@ -1,8 +1,8 @@
 {
   "name": "VariableDefinition",
-  "http.path": "variable",
   "plural": "variables",
   "base": "PersistedModel",
+  "http.path": "variable",
   "mongodb": {},
   "mixins": {},
   "properties": {
