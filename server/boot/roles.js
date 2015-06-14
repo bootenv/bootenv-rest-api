@@ -14,9 +14,9 @@ module.exports = function(app) {
     }
 
     if (ctx.modelId) {
-      ctx.model.findById(ctx.modelId, function(err, account) {
-        if (err || !account) {
-          cb(err);
+      ctx.model.findById(ctx.modelId).then(function(account) {
+        if (!account) {
+          cb(true);
         } else {
           var ids = account.ownerIds.map(function(id) {
             return id.toString();
@@ -24,7 +24,7 @@ module.exports = function(app) {
 
           cb(null, ids.indexOf(currentUserId.toString()) > -1);
         }
-      });
+      }).catch(cb);
     }
   });
 

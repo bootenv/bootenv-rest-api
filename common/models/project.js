@@ -1,22 +1,15 @@
 'use strict';
 
-var acl = require('../../server/utils/acl');
 var app = require('../../server/server');
+var acl = require('../../server/utils/acl');
+var getIds = require('../../server/utils/get-ids');
 
 module.exports = function(Project) {
-  acl.checkAccess(Project, function(currentUserId, cb) {
-    app.models.Account.find({ where: { ownerIds: currentUserId } }, function(err, accounts) {
-      if (accounts.length === 0) {
-        return cb({ id: null });
+  acl.checkAccess(Project, function(currentUserId) {
+    return app.models.Account.find({ where: { ownerIds: currentUserId } }).then(function(accounts) {
+      if (accounts.length > 0) {
+        return { accountId: { inq: getIds(accounts) } };
       }
-
-      cb({
-        accountId: {
-          inq: accounts.map(function(account) {
-            return account.id;
-          })
-        }
-      });
     });
   });
 };

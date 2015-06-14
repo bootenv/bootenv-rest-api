@@ -10,19 +10,15 @@ module.exports = {
       var accessToken = context && context.get('accessToken');
 
       if (accessToken) {
-        filter(accessToken.userId, function(where) {
-          if (!where) {
-            return next();
-          }
-
-          if (ctx.query.where) {
+        filter(accessToken.userId).then(function(where) {
+          if (where && ctx.query.where) {
             ctx.query.where = { and: [ctx.query.where, where] };
           } else {
-            ctx.query.where = where;
+            ctx.query.where = where || { id: null };
           }
 
           next();
-        });
+        }).catch(next);
       } else {
         next();
       }
