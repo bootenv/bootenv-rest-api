@@ -20,6 +20,7 @@ You will need the following things properly installed on your computer.
 * change into the new directory `bootenv-rest-api`
 * `nvm use`
 * `npm install -g strongloop`
+* `npm install -g nodemon`
 * `npm install`
 
 ## DB Config
@@ -38,7 +39,7 @@ db.createUser({user: "I-need-bootenv-here", pwd: "Serious-I-need-bootenv-here-NO
 ## Running / Development
 
 * `nvm use`
-* `slc run`
+* `nodemon`
 * Visit your API status at [http://localhost:3000](http://localhost:3000).
 * To explore your API visit [http://localhost:3000/explorer](http://localhost:3000/explorer).
 

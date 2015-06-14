@@ -1,11 +1,22 @@
 /* Styles used for loopback explorer customizations */
+body #header a#logo {
+  background-size: 120px 35px;
+  padding: 14px 0 14px 127px;
+}
+
+body #header form#api_selector .input a#explore {
+    padding: 7px;
+}
+
 .accessTokenDisplay {
   color: white;
   margin-right: 10px;
 }
+
 .accessTokenDisplay.set {
   border-bottom: 1px dotted #333; position: relative; cursor: pointer;
 }
+
 .accessTokenDisplay.set:hover:after {
   content: attr(data-tooltip);
   position: absolute;
@@ -41,5 +52,5 @@
 }
 
 #api_selector {
-  padding: 0px 20px;
+  padding: 0 20px;
 }

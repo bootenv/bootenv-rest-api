@@ -12,7 +12,6 @@ function disableRemoteRelationship(user, relationship) {
 }
 
 module.exports = function(user) {
-
   user.disableRemoteMethod('count', true);
   user.disableRemoteMethod('find', true);
   user.disableRemoteMethod('findOne', true);
@@ -22,5 +21,5 @@ module.exports = function(user) {
   disableRemoteRelationship(user, 'credentials');
   disableRemoteRelationship(user, 'identities');
   disableRemoteRelationship(user, 'personalAccount');
-
 };
+
