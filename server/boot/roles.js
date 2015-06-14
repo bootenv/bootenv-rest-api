@@ -1,7 +1,5 @@
 'use strict';
 
-var log = require('../utils/logger');
-
 module.exports = function(app) {
 
   app.models.Role.registerResolver('accountOwner', function(role, ctx, cb) {
@@ -21,7 +19,7 @@ module.exports = function(app) {
           cb(err);
         } else {
           var ids = account.ownerIds.map(function(id) {
-            return id.toString()
+            return id.toString();
           });
 
           cb(null, ids.indexOf(currentUserId.toString()) > -1);
