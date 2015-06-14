@@ -60,9 +60,8 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "DENY",
-      "property": "findById"
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
     },
     {
       "accessType": "*",
