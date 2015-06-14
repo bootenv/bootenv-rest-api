@@ -13,7 +13,6 @@
   "nonew": true,
   "noarg": true,
   "quotmark": "single",
-  "strict": true,
   "trailing": true,
   "smarttabs": true,
   "undef": true,

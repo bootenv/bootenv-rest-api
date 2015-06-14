@@ -1,7 +1,5 @@
-'use strict';
-
-var environment = require('./environment');
-var winston = require('winston');
+import environment from './environment';
+import winston from 'winston';
 
 var config = {
   colors: {
@@ -48,4 +46,4 @@ winston.emitErrs = true;
 
 log.debug('Running on [%s] environment.', environment.getName());
 
-module.exports = log;
+export default log;

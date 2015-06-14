@@ -1,19 +1,19 @@
-'use strict';
+class Environment {
+  init() {
+    this.name = (process.env.NODE_ENV || 'development');
+  }
 
-var Environment = function() {
-  this.name = (process.env.NODE_ENV || 'development');
-};
+  getName() {
+    return this.name;
+  }
 
-Environment.prototype.getName = function() {
-  return this.name;
-};
+  isDev() {
+    return this.name === 'development';
+  }
 
-Environment.prototype.isDev = function() {
-  return (this.name === 'development');
-};
+  isProd() {
+    return this.name === 'production';
+  }
+}
 
-Environment.prototype.isProd = function() {
-  return (this.name === 'production');
-};
-
-module.exports = new Environment();
+export default new Environment();

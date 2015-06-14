@@ -1,10 +1,8 @@
-'use strict';
+import environment from '../utils/environment';
+import path from 'path';
+import log from '../utils/logger';
 
-var environment = require('../utils/environment');
-var path = require('path');
-var log = require('../utils/logger');
-
-module.exports = function(app) {
+export default function(app) {
   if (environment.isDev()) {
     try {
       var explorer = require('loopback-explorer');
@@ -27,4 +25,5 @@ module.exports = function(app) {
       log.error('Run `npm install loopback-explorer` to enable the LoopBack explorer');
     }
   }
-};
+}
+

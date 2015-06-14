@@ -1,7 +1,4 @@
-'use strict';
+export default function(app) {
+  app.use(app.get('restApiRoot'), app.loopback.rest());
+}
 
-module.exports = function(app) {
-  var restApiRoot = app.get('restApiRoot');
-
-  app.use(restApiRoot, app.loopback.rest());
-};

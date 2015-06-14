@@ -1,2 +1,3 @@
 // Use the same environment-based configuration as in staging
-module.exports = require('./datasources.staging.js');
+import ds from './datasources.staging.js';
+export default ds;

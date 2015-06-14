@@ -15,7 +15,7 @@
   "main": "server/server.js",
   "scripts": {
     "pretest": "jscs -e . && jshint .",
-    "start": "node server/server.js"
+    "start": "nodemon -x babel-node server/server.js"
   },
   "keywords": [
     "Bootenv",
@@ -24,9 +24,11 @@
   ],
   "dependencies": {
     "async": "^1.2.1",
+    "babel": "^5.5.8",
     "compression": "^1.5.0",
     "cors": "^2.7.1",
     "errorhandler": "^1.4.0",
+    "es6-module-loader": "^0.17.1",
     "ipware": "0.0.5",
     "loopback": "^2.18.0",
     "loopback-boot": "^2.8.1",
@@ -45,6 +47,7 @@
     "passport-twitter": "^1.0.3",
     "serve-favicon": "^2.3.0",
     "strong-express-metrics": "^2.0.0",
+    "traceur": "0.0.90",
     "winston": "^1.0.0"
   },
   "optionalDependencies": {

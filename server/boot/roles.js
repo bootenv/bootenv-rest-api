@@ -1,7 +1,4 @@
-'use strict';
-
-module.exports = function(app) {
-
+export default function(app) {
   app.models.Role.registerResolver('accountOwner', function(role, ctx, cb) {
     if (ctx.modelName !== 'Account') {
       return cb(null, false);
@@ -14,18 +11,16 @@ module.exports = function(app) {
     }
 
     if (ctx.modelId) {
-      ctx.model.findById(ctx.modelId).then(function(account) {
+      ctx.model.findById(ctx.modelId).then((account) => {
         if (!account) {
           cb(true);
         } else {
-          var ids = account.ownerIds.map(function(id) {
-            return id.toString();
-          });
+          var ids = account.ownerIds.map(id => id.toString());
 
           cb(null, ids.indexOf(currentUserId.toString()) > -1);
         }
       }).catch(cb);
     }
   });
+}
 
-};

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   MongoDS: {
     name: 'MongoDS',
     connector: 'mongodb',

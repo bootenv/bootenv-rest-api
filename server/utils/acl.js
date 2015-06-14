@@ -1,8 +1,6 @@
-'use strict';
+import loopback from 'loopback';
 
-var loopback = require('loopback');
-
-module.exports = {
+export default {
 
   checkAccess(model, filter) {
     model.observe('access', function limitToOwners(ctx, next) {
@@ -10,7 +8,7 @@ module.exports = {
       var accessToken = context && context.get('accessToken');
 
       if (accessToken) {
-        filter(accessToken.userId).then(function(where) {
+        filter(accessToken.userId).then((where) => {
           if (where && ctx.query.where) {
             ctx.query.where = { and: [ctx.query.where, where] };
           } else {

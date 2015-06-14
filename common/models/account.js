@@ -1,11 +1,9 @@
-'use strict';
+import loopback from 'loopback';
+import app from '../../server/server';
+import acl from '../../server/utils/acl';
 
-var loopback = require('loopback');
-var app = require('../../server/server');
-var acl = require('../../server/utils/acl');
-
-module.exports = function(Account) {
-  acl.checkAccess(Account, function(currentUserId) {
+export default function(Account) {
+  acl.checkAccess(Account, (currentUserId) => {
     return Promise.resolve({ ownerIds: currentUserId });
   });
 
@@ -14,7 +12,7 @@ module.exports = function(Account) {
     let accessToken = context && context.get('accessToken');
 
     if (accessToken && ctx.instance) {
-      app.models.user.findById(accessToken.userId).then(function(user) {
+      app.models.user.findById(accessToken.userId).then((user) => {
         ctx.instance.owners.add(user);
         next();
       }).catch(next);
@@ -22,5 +20,5 @@ module.exports = function(Account) {
       next();
     }
   });
-};
+}
 

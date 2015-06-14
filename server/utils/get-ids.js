@@ -1,7 +1,3 @@
-'use strict';
-
-module.exports = function(list) {
-  return list.map(function(item) {
-    return item.id;
-  });
-};
+export default function(list) {
+  return list.map(item => item.id);
+}

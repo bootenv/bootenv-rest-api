@@ -1,16 +1,18 @@
-'use strict';
+import loopback from 'loopback';
+import boot from 'loopback-boot';
+import loopbackPassport from 'loopback-component-passport';
+import log from './utils/logger';
+import providers from './auth-providers.json';
 
-var loopback = require('loopback');
-var boot = require('loopback-boot');
-var loopbackPassport = require('loopback-component-passport');
-var log = require('./utils/logger');
-var providers = require('./auth-providers.json');
+import ips from 'loopback-ds-ips-mixin';
+import timestamp from 'loopback-ds-timestamp-mixin';
+import readonly from 'loopback-ds-readonly-mixin';
 
-var app = module.exports = loopback();
+var app = loopback();
 
-require('loopback-ds-ips-mixin')(app);
-require('loopback-ds-timestamp-mixin')(app);
-require('loopback-ds-readonly-mixin')(app);
+ips(app);
+timestamp(app);
+readonly(app);
 
 app.use(loopback.compress());
 app.use(loopback.context());
@@ -54,6 +56,8 @@ app.start = function() {
     log.info('Web server listening at: %s', app.get('url'));
   });
 };
+
+export default app;
 
 // start the server if `$ node server.js`
 if (require.main === module) {
