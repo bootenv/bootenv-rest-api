@@ -38,10 +38,12 @@ passportConfigurator.setupModels({
 });
 
 for (var provider in providers) {
-  var config = providers[provider];
+  if (providers.hasOwnProperty(provider)) {
+    var config = providers[provider];
 
-  config.session = config.session !== false;
-  passportConfigurator.configureProvider(provider, config);
+    config.session = config.session !== false;
+    passportConfigurator.configureProvider(provider, config);
+  }
 }
 
 app.start = function() {
