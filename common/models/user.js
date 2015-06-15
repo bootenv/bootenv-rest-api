@@ -1,4 +1,5 @@
-'use strict';
+import app from '../../server/server';
+import { loadIds } from '../../server/utils/get-ids';
 
 function disableRemoteRelationship(model, relationship) {
   model.disableRemoteMethod('__count__' + relationship, false);
@@ -21,5 +22,12 @@ export default function(user) {
   disableRemoteRelationship(user, 'credentials');
   disableRemoteRelationship(user, 'identities');
   disableRemoteRelationship(user, 'personalAccount');
+
+  user.afterRemote('*', function(ctx, user, next) {
+    // TODO add here also accounts that the user has read access too
+    loadIds(ctx.result, "accountIds", app.models.Account, "ownerIds")
+      .then(next)
+      .catch(next);
+  });
 }
 

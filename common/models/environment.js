@@ -1,6 +1,6 @@
 import app from '../../server/server';
 import acl from '../../server/utils/acl';
-import getIds from '../../server/utils/get-ids';
+import { getIds, loadIds } from '../../server/utils/get-ids';
 
 export default function(Environment) {
   acl.checkAccess(Environment, (currentUserId) => {
@@ -13,6 +13,12 @@ export default function(Environment) {
         });
       }
     });
+  });
+
+  Environment.afterRemote('*', function(ctx, user, next) {
+    loadIds(ctx.result, "tokenIds", app.models.EnvironmentToken, "environmentId")
+      .then(next)
+      .catch(next);
   });
 }
 

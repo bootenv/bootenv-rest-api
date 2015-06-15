@@ -1,6 +1,7 @@
 import loopback from 'loopback';
 import app from '../../server/server';
 import acl from '../../server/utils/acl';
+import { loadIds } from '../../server/utils/get-ids';
 
 export default function(Account) {
   acl.checkAccess(Account, (currentUserId) => {
@@ -19,6 +20,12 @@ export default function(Account) {
     } else {
       next();
     }
+  });
+
+  Account.afterRemote('*', function(ctx, user, next) {
+    loadIds(ctx.result, "projectIds", app.models.Project, "accountId")
+      .then(next)
+      .catch(next);
   });
 }
 
