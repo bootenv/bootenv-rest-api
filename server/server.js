@@ -1,12 +1,14 @@
 import loopback from 'loopback';
 import boot from 'loopback-boot';
 import loopbackPassport from 'loopback-component-passport';
-import log from './utils/logger';
-import providers from './auth-providers.json';
-
 import ips from 'loopback-ds-ips-mixin';
 import timestamp from 'loopback-ds-timestamp-mixin';
 import readonly from 'loopback-ds-readonly-mixin';
+import figlet from 'figlet'
+import ansi from 'ansi'
+
+import log from './utils/logger';
+import providers from './auth-providers.json';
 
 var app = loopback();
 
@@ -50,8 +52,27 @@ for (var provider in providers) {
 
 app.start = function() {
   // start the web server
-  return app.listen(function() {
+  return app.listen(() => {
     app.emit('started');
+
+    console.log('');
+
+    let bootenv = ' '.repeat(80) + '\n' +
+      figlet.textSync('>bootenv', { font: 'DOS Rebel' }).replace(/\n *$/, '');
+    let cursor = ansi(process.stdout);
+    let regExp = /(.{10})(.*)(.{32})\n/g;
+
+    let match;
+    while (match = regExp.exec(bootenv)) {
+      cursor
+        .green().write(match[1])
+        .white().bg.reset().write(match[2] + ' ')
+        .black().bg.green().write(match[3] + ' ')
+        .reset().bg.reset().write('\n');
+    }
+
+    console.log(figlet.textSync(' '.repeat(8) + 'Rest API', { font: 'JS Stick Letters' }));
+    console.log('');
 
     log.info('Web server listening at: %s', app.get('url'));
   });

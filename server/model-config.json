@@ -3,9 +3,8 @@
     "sources": [
       "loopback/common/models",
       "loopback/server/models",
-      "../common/models",
-      "./models",
-      "./node_modules/loopback-component-passport/lib/models"
+      "./node_modules/loopback-component-passport/lib/models",
+      "../common/models"
     ],
     "mixins": [
       "loopback/common/mixins",

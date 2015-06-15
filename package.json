@@ -23,12 +23,14 @@
     "Strongloop"
   ],
   "dependencies": {
+    "ansi": "^0.3.0",
     "async": "^1.2.1",
     "babel": "^5.5.8",
     "compression": "^1.5.0",
     "cors": "^2.7.1",
     "errorhandler": "^1.4.0",
     "es6-module-loader": "^0.17.1",
+    "figlet": "^1.1.1",
     "ipware": "0.0.5",
     "loopback": "^2.18.0",
     "loopback-boot": "^2.8.1",
