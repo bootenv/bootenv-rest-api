@@ -1,7 +1,7 @@
 {
   "name": "bootenv-rest-api",
   "description": "Bootenv REST-API",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "author": "Bootenv",
   "license": "Apache-2.0",
   "repository": {
