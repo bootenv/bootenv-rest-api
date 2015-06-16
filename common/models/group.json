@@ -1,10 +1,10 @@
 {
-  "name": "Account",
-  "plural": "accounts",
+  "name": "Group",
+  "plural": "groups",
   "base": "PersistedModel",
-  "http.path": "account",
+  "http.path": "group",
   "mongodb": {
-    "collection": "accounts"
+    "collection": "groups"
   },
   "mixins": {
     "TimeStamp": {
@@ -16,9 +16,6 @@
       "createdByIp": "createdIp",
       "updatedByIp": "lastUpdatedIp",
       "required": false
-    },
-    "Readonly": {
-      "projects": true
     }
   },
   "properties": {
@@ -27,33 +24,20 @@
       "required": true,
       "index": true
     },
-    "public": {
-      "type": "boolean",
-      "index": true
-    },
-    "personal": {
-      "type": "boolean"
-    },
     "description": {
       "type": "string"
     },
-    "url": {
-      "type": "string"
-    },
-    "email": {
-      "type": "string"
+    "public": {
+      "type": "boolean",
+      "index": true,
+      "default": true
     }
   },
   "validations": [],
   "relations": {
-    "projects": {
-      "type": "hasMany",
-      "model": "Project"
-    },
-    "owners": {
+    "environments": {
       "type": "referencesMany",
-      "model": "User",
-      "foreignKey": "ownerIds"
+      "model": "User"
     }
   },
   "acls": [
@@ -62,13 +46,6 @@
       "principalType": "ROLE",
       "principalId": "$unauthenticated",
       "permission": "DENY"
-    },
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "accountOwner",
-      "permission": "ALLOW",
-      "property": "findById"
     }
   ],
   "methods": []

@@ -26,26 +26,30 @@
     "dataSource": "MongoDS",
     "public": false
   },
-  "user": {
+  "User": {
     "dataSource": "MongoDS",
     "public": true,
     "options": {
       "emailVerificationRequired": false
     }
   },
-  "accessToken": {
+  "AccessToken": {
     "dataSource": "MongoDS",
     "public": false
   },
-  "userCredential": {
+  "UserCredential": {
     "dataSource": "MongoDS",
     "public": false
   },
-  "userIdentity": {
+  "UserIdentity": {
     "dataSource": "MongoDS",
     "public": false
   },
   "Account": {
+    "dataSource": "MongoDS",
+    "public": true
+  },
+  "Group": {
     "dataSource": "MongoDS",
     "public": true
   },

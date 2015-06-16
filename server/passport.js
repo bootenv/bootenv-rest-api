@@ -7,9 +7,9 @@ export default function setupPassport(app) {
   passportConfigurator.init();
 
   passportConfigurator.setupModels({
-    userModel: app.models.user,
-    userIdentityModel: app.models.userIdentity,
-    userCredentialModel: app.models.userCredential
+    userModel: app.models.User,
+    userIdentityModel: app.models.UserIdentity,
+    userCredentialModel: app.models.UserCredential
   });
 
   for (let [provider, config] of Object.entries(providers)) {

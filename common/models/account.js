@@ -11,7 +11,7 @@ export default function(Account) {
     let accessToken = context && context.get('accessToken');
 
     if (accessToken && ctx.instance) {
-      app.models.user.findById(accessToken.userId)
+      app.models.User.findById(accessToken.userId)
         .then(user => {
           ctx.instance.owners.add(user);
           next();

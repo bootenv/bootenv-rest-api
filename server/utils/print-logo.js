@@ -5,8 +5,8 @@ export function printLogo() {
   let cursor = ansi(process.stdout);
 
   cursor
-    .bg.black()
     .bold()
+    .bg.black()
     .green().write('>')
     .white().write('boot')
     .resetBold()
