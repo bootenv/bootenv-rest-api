@@ -1,5 +1,5 @@
 class Environment {
-  init() {
+  constructor() {
     this.name = (process.env.NODE_ENV || 'development');
   }
 
@@ -17,3 +17,4 @@ class Environment {
 }
 
 export default new Environment();
+

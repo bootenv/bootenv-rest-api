@@ -47,3 +47,4 @@ winston.emitErrs = true;
 log.debug('Running on [%s] environment.', environment.getName());
 
 export default log;
+

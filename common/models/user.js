@@ -1,15 +1,13 @@
 import app from '../../server/server';
 import { loadIds } from '../../server/utils/get-ids';
 
+const allMethods = ['__count__', '__get__', '__create__', '__delete__', '__destroyById__',
+  '__findById__', '__getById__', '__updateById__'];
+
 function disableRemoteRelationship(model, relationship) {
-  model.disableRemoteMethod('__count__' + relationship, false);
-  model.disableRemoteMethod('__get__' + relationship, false);
-  model.disableRemoteMethod('__create__' + relationship, false);
-  model.disableRemoteMethod('__delete__' + relationship, false);
-  model.disableRemoteMethod('__destroyById__' + relationship, false);
-  model.disableRemoteMethod('__findById__' + relationship, false);
-  model.disableRemoteMethod('__getById__' + relationship, false);
-  model.disableRemoteMethod('__updateById__' + relationship, false);
+  for (let method of allMethods) {
+    model.disableRemoteMethod(method + relationship, false);
+  }
 }
 
 export default function(user) {
@@ -23,11 +21,10 @@ export default function(user) {
   disableRemoteRelationship(user, 'identities');
   disableRemoteRelationship(user, 'personalAccount');
 
-  user.afterRemote('*', function(ctx, user, next) {
-    // TODO add here also accounts that the user has read access too
-    loadIds(ctx.result, "accountIds", app.models.Account, "ownerIds")
+  // TODO add here too the accounts that the user has read access
+  user.afterRemote('*', (ctx, user, next) =>
+    loadIds(ctx.result, 'accountIds', app.models.Account, 'ownerIds')
       .then(next)
-      .catch(next);
-  });
+      .catch(next));
 }
 

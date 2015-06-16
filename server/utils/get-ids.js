@@ -1,7 +1,7 @@
 /**
  * Returns a list of ids from a list of models.
  *
- * @param list The list of models
+ * @param {Array} list The list of models
  * @returns {Array} An array of ids.
  */
 export function getIds(list) {
@@ -11,22 +11,23 @@ export function getIds(list) {
 /**
  * Adds a list of ids of a related model to a result object.
  *
- * @param result The result object.
- * @param resultProperty The property that will be added to the result object with the list of ids.
- * @param relatedModel The related model class.
- * @param relatedModelProperty The related model property that references the results object id.
+ * @param {Array|Object} result The result object.
+ * @param {String} resultProperty The property that will be added to the result object with the list of ids.
+ * @param {object} relatedModel The related model class.
+ * @param {String} relatedModelProperty The related model property that references the results object id.
  * @returns {Promise} A promise that will resolve to false if the ids are loaded
- *          so that it can be used with .then(next).
+ *          so that it can be used with <code>.then(next).catch(error)</code>.
  */
 export function loadIds(result, resultProperty, relatedModel, relatedModelProperty) {
   if (!result) {
-    Promise.reject("Object is null");
+    // Object was deleted
+    return Promise.resolve();
   }
 
   if (Array.isArray(result)) {
     return Promise
       .all(result.map(item => loadIds(item, resultProperty, relatedModel, relatedModelProperty)))
-      .then(() => false)
+      .then(() => false);
   }
 
   let query = { where: {} };
@@ -36,6 +37,6 @@ export function loadIds(result, resultProperty, relatedModel, relatedModelProper
   return relatedModel.find(query)
     .then(getIds)
     .then(ids => result[resultProperty] = ids)
-    .then(() => false)
+    .then(() => false);
 }
 

@@ -1,5 +1,5 @@
 export default function(app) {
-  app.models.Role.registerResolver('accountOwner', function(role, ctx, cb) {
+  app.models.Role.registerResolver('accountOwner', (role, ctx, cb) => {
     if (ctx.modelName !== 'Account') {
       return cb(null, false);
     }
@@ -11,7 +11,7 @@ export default function(app) {
     }
 
     if (ctx.modelId) {
-      ctx.model.findById(ctx.modelId).then((account) => {
+      ctx.model.findById(ctx.modelId).then(account => {
         if (!account) {
           cb(true);
         } else {
