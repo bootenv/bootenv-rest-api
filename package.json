@@ -40,6 +40,7 @@
     "loopback-ds-ips-mixin": "^1.0.1",
     "loopback-ds-readonly-mixin": "^1.0.0",
     "loopback-ds-timestamp-mixin": "^2.1.1",
+    "nodemon": "^1.3.7",
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0",
     "passport-github2": "^0.1.9",

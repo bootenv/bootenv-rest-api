@@ -20,8 +20,6 @@ You will need the following things properly installed on your computer.
 * change into the new directory `bootenv-rest-api`
 * `nvm use`
 * `npm install -g strongloop`
-* `npm install -g nodemon`
-* `npm install -g babel`
 * `npm install`
 
 ## DB Config
