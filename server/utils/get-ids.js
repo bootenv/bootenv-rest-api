@@ -11,7 +11,7 @@ export function getIds(list) {
 /**
  * Adds a list of ids of a related model to a result object.
  *
- * @param {Array|Object} result The result object.
+ * @param {Array|Object} result The result object or an array of result objects.
  * @param {String} resultProperty The property that will be added to the result object with the list of ids.
  * @param {object} relatedModel The related model class.
  * @param {String} relatedModelProperty The related model property that references the results object id.

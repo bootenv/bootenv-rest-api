@@ -12,8 +12,8 @@ function disableRemoteRelationship(model, relationship) {
 export default function(app) {
   var User = app.models.User;
 
-  User.plural = 'users';
-  User.http.path = 'users';
+  User.settings.plural = 'users';
+  User.settings.http = { path: 'user' };
 
   app.models.User.settings.mongodb = { collection: 'users' };
   app.models.AccessToken.settings.mongodb = { collection: 'accessTokens' };
@@ -37,22 +37,8 @@ export default function(app) {
 
   User.hasMany(app.models.Account, { as: 'personalAccount' });
 
-  User.settings.acls = [
-    {
-      'accessType': '*',
-      'principalType': 'ROLE',
-      'principalId': '$unauthenticated',
-      'permission': 'DENY'
-    },
-    {
-      'accessType': '*',
-      'principalType': 'ROLE',
-      'principalId': '$owner',
-      'permission': 'ALLOW'
-    }
-  ];
-
-  User.hidden = [
+  User.settings.hidden = [
+    'password',
     'emailVerified',
     'verificationToken',
     'accessTokens',
@@ -72,6 +58,21 @@ export default function(app) {
   disableRemoteRelationship(User, 'credentials');
   disableRemoteRelationship(User, 'identities');
   disableRemoteRelationship(User, 'personalAccount');
+
+  User.settings.acls = [
+    {
+      accessType: '*',
+      principalType: 'ROLE',
+      principalId: '$unauthenticated',
+      permission: 'DENY'
+    },
+    {
+      accessType: '*',
+      principalType: 'ROLE',
+      principalId: '$owner',
+      permission: 'ALLOW'
+    }
+  ];
 
   // TODO add here too the accounts that the user has read access
   User.afterRemote('*', (ctx, user, next) =>
