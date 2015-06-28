@@ -1,7 +1,6 @@
 {
   "MongoDS": {
     "name": "MongoDS",
-    "connector": "mongodb",
-    "url": "mongodb://localhost:27017/bootenv-db"
+    "connector": "mongodb"
   }
 }

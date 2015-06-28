@@ -1,7 +1,9 @@
-import environment from './environment';
+import environment from 'bootenv';
 import winston from 'winston';
 
-var config = {
+var LOG_PROPERTY = 'LOG';
+var LOG_LEVEL_PROPERTY = 'LOG_LEVEL';
+var CONFIG = {
   colors: {
     trace: 'magenta',
     input: 'grey',
@@ -18,16 +20,16 @@ var config = {
   exitOnError: false
 };
 
-if (environment.isProd()) {
-  config.transports.push(
+if (!environment.supportsOr(LOG_PROPERTY, true)) {
+  CONFIG.transports.push(
     new winston.transports.Console({
-      level: 'warn'
+      level: environment.getPropertyOr(LOG_LEVEL_PROPERTY, 'warn')
     })
   );
 } else {
-  config.transports.push(
+  CONFIG.transports.push(
     new winston.transports.Console({
-      level: 'debug',
+      level: environment.getPropertyOr(LOG_LEVEL_PROPERTY, 'debug'),
       handleExceptions: true,
       timestamp: true,
       stringify: false,
@@ -40,7 +42,7 @@ if (environment.isProd()) {
   );
 }
 
-var log = new winston.Logger(config);
+var log = new winston.Logger(CONFIG);
 
 winston.emitErrs = true;
 
