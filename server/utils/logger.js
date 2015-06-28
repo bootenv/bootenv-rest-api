@@ -1,9 +1,8 @@
 import environment from 'bootenv';
 import winston from 'winston';
 
-const LOG_PROPERTY = 'LOG';
-const LOG_LEVEL_PROPERTY = 'LOG_LEVEL';
-const  CONFIG = {
+const LOG_LEVEL = 'LOG_LEVEL';
+const CONFIG = {
   colors: {
     trace: 'magenta',
     input: 'grey',
@@ -20,16 +19,17 @@ const  CONFIG = {
   exitOnError: false
 };
 
-if (!environment.supportsOr(LOG_PROPERTY, true)) {
+var environmentName = environment.getName();
+if (environmentName !== 'development') {
   CONFIG.transports.push(
     new winston.transports.Console({
-      level: environment.getPropertyOr(LOG_LEVEL_PROPERTY, 'warn')
+      level: environment.getPropertyOr(LOG_LEVEL, 'warn')
     })
   );
 } else {
   CONFIG.transports.push(
     new winston.transports.Console({
-      level: environment.getPropertyOr(LOG_LEVEL_PROPERTY, 'debug'),
+      level: environment.getPropertyOr(LOG_LEVEL, 'debug'),
       handleExceptions: true,
       timestamp: true,
       stringify: false,
@@ -46,7 +46,7 @@ var log = new winston.Logger(CONFIG);
 
 winston.emitErrs = true;
 
-log.debug('Running on [%s] environment.', environment.getName());
+log.debug('Running on [%s] environment.', environmentName);
 
 export default log;
 
