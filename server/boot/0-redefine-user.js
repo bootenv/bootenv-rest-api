@@ -61,6 +61,12 @@ export default function(app) {
 
   User.settings.acls = [
     {
+      property: 'login',
+      principalType: 'ROLE',
+      principalId: '$unauthenticated',
+      permission: 'ALLOW'
+    },
+    {
       accessType: '*',
       principalType: 'ROLE',
       principalId: '$unauthenticated',
