@@ -28,13 +28,6 @@ The data layer for API is based on `MongoDB`.
 
 > Now, we are not using `bootenv` to setup our conf variables but we really need migrate as soon as possible!
 
-```
-mongod --noauth
-mongo
-use bootenv-db;
-db.createUser({user: "I-need-bootenv-here", pwd: "Serious-I-need-bootenv-here-NOW!", roles: [ { role: "userAdmin", db: "bootenv-db" } ]});
-```
-
 ## Running / Development
 
 * `nvm use`
