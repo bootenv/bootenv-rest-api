@@ -1,4 +1,4 @@
 // Use the same environment-based configuration
-import ds from './local-datasource.js';
+import ds from './config-datasource.js';
 
 export default ds;
