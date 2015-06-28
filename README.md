@@ -46,19 +46,41 @@ db.createUser({user: "I-need-bootenv-here", pwd: "Serious-I-need-bootenv-here-NO
 
 Make use of the many generators for code, try `slc --help` for more details
 
-### Deploying
+## Docker
 
-Specify what it takes to deploy your app.
+As we want to run this REST-API in a [Docker](https://www.docker.com/) container, please take a look on a given `Dockerfile`. 
+The [Dockerfile](Dockerfile) is simple and straightforward.
+
+### Running with Docker Compose
+
+The quickest way to get started is using [Docker Compose](https://docs.docker.com/compose/).
+
+```
+docker-compose up
+```
+
+__NOTE:__ Please allow a couple of minutes for the REST-API to start.
+
+### Build and Running the Docker Image
+
+Alternately, you can manually build and run the Docker REST-API container.
+
+```
+docker build --tag="bootenv/bootenv-rest-api:latest" .
+docker run -d --name api -p 3000:3000 --env='NODE_ENV=development' --env='MONGO_URL=mongodb://localhost:27017' bootenv/bootenv-rest-api:latest
+```
 
 ## Further Reading / Useful Links
 
 * [StrongLoop](https://strongloop.com/)
 * [LoopBack](http://docs.strongloop.com/display/public/LB/LoopBack)
 * [Getting started with LoopBack](http://docs.strongloop.com/display/public/LB/Getting+started+with+LoopBack)
+* [Docker](https://docs.docker.com/userguide/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Versions
  
- - 1.0.0 (current)
+ - 1.0.0-alpha.1 (current)
 
 ## License
 

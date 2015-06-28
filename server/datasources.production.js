@@ -1,4 +1,3 @@
-// Use the same environment-based configuration as in staging
-import ds from './datasources.staging.js';
+// Use the same environment-based configuration
+import ds from './datasources.local.js';
 export default ds;
-

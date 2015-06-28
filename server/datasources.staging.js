@@ -1,8 +1,3 @@
-export default {
-  MongoDS: {
-    name: 'MongoDS',
-    connector: 'mongodb',
-    url: process.env.MONGO_URL
-  }
-};
-
+// Use the same environment-based configuration
+import ds from './datasources.local.js';
+export default ds;
