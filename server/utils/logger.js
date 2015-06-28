@@ -1,9 +1,9 @@
 import environment from 'bootenv';
 import winston from 'winston';
 
-var LOG_PROPERTY = 'LOG';
-var LOG_LEVEL_PROPERTY = 'LOG_LEVEL';
-var CONFIG = {
+const LOG_PROPERTY = 'LOG';
+const LOG_LEVEL_PROPERTY = 'LOG_LEVEL';
+const  CONFIG = {
   colors: {
     trace: 'magenta',
     input: 'grey',
