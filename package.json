@@ -27,7 +27,7 @@
     "ansi": "^0.3.0",
     "async": "^1.2.1",
     "babel": "^5.6.4",
-    "bootenv": "^1.0.0",
+    "bootenv": "^1.1.0",
     "compression": "^1.5.0",
     "cors": "^2.7.1",
     "errorhandler": "^1.4.0",

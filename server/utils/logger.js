@@ -1,4 +1,4 @@
-import environment from 'bootenv';
+import { environment } from 'bootenv';
 import winston from 'winston';
 
 const LOG_LEVEL = 'LOG_LEVEL';

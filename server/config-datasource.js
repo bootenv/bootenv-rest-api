@@ -1,4 +1,4 @@
-import environment from 'bootenv';
+import { environment } from 'bootenv';
 
 const MONGO_URL_PROPERTY = 'MONGO_URL';
 const DEFAULT_MONGO_URL = 'mongodb://localhost:27017/bootenv-db';
