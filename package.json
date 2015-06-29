@@ -9,8 +9,8 @@
     "url": "git@github.com:bootenv/bootenv-rest-api.git"
   },
   "engines": {
-    "iojs": "2.1.x",
-    "npm": "2.11.x"
+    "iojs": "2.3.x",
+    "npm": "2.12.x"
   },
   "main": "server/server.js",
   "scripts": {
