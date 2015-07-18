@@ -9,8 +9,8 @@
     "url": "git@github.com:bootenv/bootenv-rest-api.git"
   },
   "engines": {
-    "iojs": "2.3.x",
-    "npm": "2.12.x"
+    "iojs": "2.4.x",
+    "npm": "2.13.x"
   },
   "main": "server/server.js",
   "scripts": {
@@ -25,20 +25,20 @@
   ],
   "dependencies": {
     "ansi": "^0.3.0",
-    "async": "^1.2.1",
-    "babel": "^5.6.4",
+    "async": "^1.3.0",
+    "babel": "^5.6.23",
     "bootenv": "^1.1.0",
-    "compression": "^1.5.0",
+    "compression": "^1.5.1",
     "cors": "^2.7.1",
-    "errorhandler": "^1.4.0",
+    "errorhandler": "^1.4.1",
     "es6-module-loader": "^0.17.2",
     "figlet": "^1.1.1",
     "ipware": "0.0.5",
-    "loopback": "^2.18.0",
-    "loopback-boot": "^2.8.1",
-    "loopback-component-passport": "^1.4.0",
-    "loopback-connector-mongodb": "^1.11.1",
-    "loopback-datasource-juggler": "^2.30.1",
+    "loopback": "^2.19.0",
+    "loopback-boot": "^2.8.2",
+    "loopback-component-passport": "^1.5.0",
+    "loopback-connector-mongodb": "^1.11.3",
+    "loopback-datasource-juggler": "^2.33.1",
     "loopback-ds-ips-mixin": "^1.0.1",
     "loopback-ds-readonly-mixin": "^1.0.0",
     "loopback-ds-timestamp-mixin": "^2.1.1",
@@ -51,12 +51,12 @@
     "passport-oauth2": "^1.1.2",
     "passport-twitter": "^1.0.3",
     "serve-favicon": "^2.3.0",
-    "strong-express-metrics": "^2.0.0",
-    "traceur": "0.0.90",
-    "winston": "^1.0.0"
+    "strong-express-metrics": "^2.0.1",
+    "traceur": "0.0.91",
+    "winston": "^1.0.1"
   },
   "optionalDependencies": {
-    "loopback-explorer": "^1.7.2"
+    "loopback-explorer": "^1.8.0"
   },
   "devDependencies": {
     "jscs": "^1.13.1",

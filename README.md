@@ -1,7 +1,7 @@
 # [![>bootenv](http://bootenv.com/img/logo-light-transparent-readme-files.png)](http://bootenv.com)-REST API
 
 [![license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE)
-[![engine](https://img.shields.io/badge/iojs-v2.3.X-yellow.svg)](http://iojs.org)
+[![engine](https://img.shields.io/badge/iojs-v2.4.X-yellow.svg)](http://iojs.org)
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com)
 [![Build Status](https://travis-ci.org/bootenv/bootenv-rest-api.svg?branch=master)](https://travis-ci.org/bootenv/bootenv-rest-api)
 
