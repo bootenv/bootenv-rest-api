@@ -30,6 +30,10 @@ export function loadIds(result, resultProperty, relatedModel, relatedModelProper
       .then(() => false);
   }
 
+  if (typeof result !== 'object') {
+    return Promise.resolve(result);
+  }
+
   let query = { where: {} };
 
   query.where[relatedModelProperty] = result.id;
