@@ -1,5 +1,5 @@
 # Based on official iojs Docker image
-FROM iojs:2-onbuild
+FROM iojs:2.5.0-onbuild
 
 LABEL version="1.0.0-alpha.1"
 LABEL description="This file describes the standard way to run >bootenv REST-API, using Docker!"
