@@ -59,27 +59,6 @@ export default function(app) {
   disableRemoteRelationship(User, 'identities');
   disableRemoteRelationship(User, 'personalAccount');
 
-  User.settings.acls = [
-    {
-      property: 'login',
-      principalType: 'ROLE',
-      principalId: '$unauthenticated',
-      permission: 'ALLOW'
-    },
-    {
-      accessType: '*',
-      principalType: 'ROLE',
-      principalId: '$unauthenticated',
-      permission: 'DENY'
-    },
-    {
-      accessType: '*',
-      principalType: 'ROLE',
-      principalId: '$owner',
-      permission: 'ALLOW'
-    }
-  ];
-
   // TODO add here too the accounts that the user has read access
   User.afterRemote('*', (ctx, user, next) =>
     loadIds(ctx.result, 'accountIds', app.models.Account, 'ownerIds')
