@@ -13,7 +13,7 @@ export function getIds(list) {
  *
  * @param {Array|Object} result The result object or an array of result objects.
  * @param {String} resultProperty The property that will be added to the result object with the list of ids.
- * @param {object} relatedModel The related model class.
+ * @param {Object} relatedModel The related model class.
  * @param {String} relatedModelProperty The related model property that references the results object id.
  * @returns {Promise} A promise that will resolve to false if the ids are loaded
  *          so that it can be used with <code>.then(next).catch(error)</code>.

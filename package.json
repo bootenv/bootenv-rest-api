@@ -9,7 +9,7 @@
     "url": "git@github.com:bootenv/bootenv-rest-api.git"
   },
   "engines": {
-    "iojs": "2.4.x",
+    "iojs": "3.0.x",
     "npm": "2.13.x"
   },
   "main": "server/server.js",
@@ -25,24 +25,24 @@
   ],
   "dependencies": {
     "ansi": "^0.3.0",
-    "async": "^1.3.0",
-    "babel": "^5.6.23",
+    "async": "^1.4.2",
+    "babel": "^5.8.21",
     "bootenv": "^1.1.0",
-    "compression": "^1.5.1",
+    "compression": "^1.5.2",
     "cors": "^2.7.1",
-    "errorhandler": "^1.4.1",
-    "es6-module-loader": "^0.17.2",
+    "errorhandler": "^1.4.2",
+    "es6-module-loader": "^0.17.5",
     "figlet": "^1.1.1",
     "ipware": "0.0.5",
-    "loopback": "^2.19.0",
-    "loopback-boot": "^2.8.2",
+    "loopback": "^2.20.0",
+    "loopback-boot": "^2.10.0",
     "loopback-component-passport": "^1.5.0",
-    "loopback-connector-mongodb": "^1.11.3",
-    "loopback-datasource-juggler": "^2.33.1",
+    "loopback-connector-mongodb": "^1.13.0",
+    "loopback-datasource-juggler": "^2.36.0",
     "loopback-ds-ips-mixin": "^1.0.1",
     "loopback-ds-readonly-mixin": "^1.0.0",
-    "loopback-ds-timestamp-mixin": "^2.1.1",
-    "nodemon": "^1.3.7",
+    "loopback-ds-timestamp-mixin": "^3.2.2",
+    "nodemon": "^1.4.0",
     "passport": "^0.2.2",
     "passport-facebook": "^2.0.0",
     "passport-github2": "^0.1.9",
@@ -59,7 +59,7 @@
     "loopback-explorer": "^1.8.0"
   },
   "devDependencies": {
-    "jscs": "^1.13.1",
+    "jscs": "^2.0.0",
     "jshint": "^2.8.0"
   }
 }
